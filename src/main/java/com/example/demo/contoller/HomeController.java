@@ -11,6 +11,7 @@ import java.util.Locale;
 public class HomeController {
     @GetMapping("/")
     public String home() {
-        return "Github Actions Test Home";
+        String homeMessage = "Github Actions Test Home";
+        return homeMessage;
     }
 }
