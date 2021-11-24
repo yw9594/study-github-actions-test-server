@@ -1,0 +1,15 @@
+name: context
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "context"
+        env: 
+          COMMIT_ID: ${{github.sha}} # 해당 step을 위한 환경 변수 생성
+        run: 
+          echo "Commit Id => $COMMIT_ID" 
